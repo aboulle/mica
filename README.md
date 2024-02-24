@@ -1,7 +1,7 @@
-A (very) **Mi**nimalistic **C**oding **A**ssistant, designed to work with codellama and using the Llamma-cpp-python library
+## A (very) **Mi**nimalistic **C**oding **A**ssistant built with the llamma-cpp-python library and designed to work with codellama.
 
-Installation instruction using GPU (recommended)
-1. Create a virtual environment
+### Installation instruction using GPU (recommended)
+1. Create a virtual environment. For example using conda:
 ```
 conda create -n <NAME> python=3.11
 ```
@@ -17,7 +17,7 @@ CMAKE_ARGS="-DLLAMA_CUBLAS=on" pip install llama-cpp-python --no-cache-dir
 ```
 
 
-Installation instruction with CPU only
+### Installation instruction with CPU only
 1. Create a virtual environment
 ```
 conda create -n <NAME> python=3.11

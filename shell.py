@@ -1,7 +1,7 @@
 import cmd
 
 class MyShell(cmd.Cmd):
-    prompt = "(prompt) >>> "
+    prompt = "[prompt] >>> "
     
     def __init__(self,function,object):                                                                       
             super().__init__()
