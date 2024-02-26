@@ -8,7 +8,7 @@ def prompt_from_template_wizard(input):
 
 def prompt_from_template_base(input):
     prompt = f"""[INST] <<SYS>>
-You are a helpful coding AI assistant.
+You are a helpful coding AI assistant. Answer in a concise way.
 <</SYS>>
 
 {input} [/INST]
