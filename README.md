@@ -7,7 +7,6 @@ ___
 ```
 conda create -n <NAME> python=3.11
 conda activate <NAME>
-
 ```
 
 #### 2. Install codellama-cpp-python
@@ -21,7 +20,7 @@ conda activate <NAME>
 	CMAKE\_ARGS="-DLLAMA\_CUBLAS=on" pip install llama-cpp-python --no-cache-dir
 	```
 
-#### 2.2. Installation instruction with CPU only
+##### 2.2. Installation instruction with CPU only
 * Install llama-cpp-python
 	```
 	pip install llama-cpp-python
