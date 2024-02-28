@@ -1,33 +1,43 @@
 ## A (very) **Mi**nimalistic **C**oding **A**ssistant built with the llamma-cpp-python library and designed to work with codellama.
 
-### Installation instruction using GPU (recommended)
-1. Create a virtual environment. For example using conda:
+### Installation instructions
+___
+
+#### 1. Create and activate a virtual environment. For example using conda:
 ```
 conda create -n <NAME> python=3.11
+conda activate <NAME>
+
 ```
 
-2. Install the CUDA utilities
-```
-conda install cudatoolkit-dev
-```
+#### 2. Install codellama-cpp-python
+##### 2.1. Installation with GPU support (recommended):
+* Install the CUDA utilities:
+	```
+	conda install cudatoolkit-dev
+	```
+* Install llama-cpp-python
+	```
+	CMAKE\_ARGS="-DLLAMA\_CUBLAS=on" pip install llama-cpp-python --no-cache-dir
+	```
 
-3. Install llama-cpp-python
-```
-CMAKE_ARGS="-DLLAMA_CUBLAS=on" pip install llama-cpp-python --no-cache-dir
-```
+#### 2.2. Installation instruction with CPU only
+* Install llama-cpp-python
+	```
+	pip install llama-cpp-python
+	```
 
-
-### Installation instruction with CPU only
-1. Create a virtual environment
+#### 3. Clone this repository
 ```
-conda create -n <NAME> python=3.11
+git clone https://github.com/aboulle/mica.git
 ```
+Alternatively download [the zip file](https://github.com/aboulle/mica/archive/refs/heads/main.zip) and uncompress.
 
-2. Install llama-cpp-python
+#### 4. Download LLM
+go to https://huggingface.co/ and download codellama or any other model. For instance: https://huggingface.co/TheBloke/CodeLlama-13B-Instruct-GGUF
+
+#### 5. Run mica
+Copy the model file in the mica folder and run mica.py:
 ```
-pip install llama-cpp-python
+python mica.py
 ```
-
-Clone the repository, go to https://huggingface.co/ and download codellama or any other model. For instance: https://huggingface.co/TheBloke/CodeLlama-13B-Instruct-GGUF 
-
-Copy the model file in the mica folder and run mica.py
