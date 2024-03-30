@@ -38,5 +38,5 @@ go to https://huggingface.co/ and download codellama or any other model. For ins
 #### 5. Run mica
 Copy the model file in the mica folder and run mica.py:
 ```
-python mica.py
+python mica.py llama
 ```

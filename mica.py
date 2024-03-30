@@ -2,6 +2,9 @@ from llama_cpp import Llama
 import sys
 from shell import MyShell
 from parameters import *
+from prompt_template import *
+
+prompt_from_template, model_path = model_selection(sys.argv)
 
 def inference(prompt,
               llm,
