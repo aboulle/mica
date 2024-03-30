@@ -1,11 +1,17 @@
-from prompt_template import prompt_from_template_base, prompt_from_template_wizard
+from prompt_template import prompt_from_template_llama, prompt_from_template_mistral, prompt_from_template_deepseek
 
-#Select prompt model
-prompt_from_template = prompt_from_template_base
+model = "deepseek"
 
-#Select LLM
-#model_path = "codellama-13b-python.Q5_K_M.gguf"
-model_path = "codellama-13b-instruct.Q5_K_M.gguf"
+if "mistral" in model:
+    prompt_from_template = prompt_from_template_mistral
+    model_path = "mistral-7b-instruct-v0.2.Q8_0.gguf"
+if "llama" in model:
+    prompt_from_template = prompt_from_template_llama
+    model_path = "codellama-13b-instruct.Q5_K_M.gguf"
+
+if "deepseek" in model:
+    prompt_from_template = prompt_from_template_deepseek
+    model_path = "deepseek-coder-6.7b-instruct.Q8_0.gguf"
 
 #Computing parameters
 n_gpu_layers=-1
