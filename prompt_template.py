@@ -1,3 +1,5 @@
+path = "/media/aboulle/Local data/_IA_/LLM/mica/"  
+
 def prompt_from_template_llama(input):
     prompt = f"""[INST] <<SYS>>
 You are a helpful coding AI assistant. Answer in a concise way.
@@ -20,12 +22,11 @@ def prompt_from_template_deepseek(input):
 def model_selection(model):
     if "mistral" in model:
         prompt_from_template = prompt_from_template_mistral
-        model_path = "mistral-7b-instruct-v0.2.Q8_0.gguf"
-    if "llama" in model:
+        model_path = path+"mistral-7b-instruct-v0.2.Q8_0.gguf"
+    if "codellama" in model:
         prompt_from_template = prompt_from_template_llama
-        model_path = "codellama-13b-instruct.Q5_K_M.gguf"
-
+        model_path = path+"codellama-13b-instruct.Q5_K_M.gguf"
     if "deepseek" in model:
         prompt_from_template = prompt_from_template_deepseek
-        model_path = "deepseek-coder-6.7b-instruct.Q8_0.gguf"
+        model_path = path+"deepseek-coder-6.7b-instruct.Q8_0.gguf"
     return prompt_from_template, model_path

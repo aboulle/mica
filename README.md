@@ -36,7 +36,7 @@ Alternatively download [the zip file](https://github.com/aboulle/mica/archive/re
 go to https://huggingface.co/ and download codellama or any other model. For instance: https://huggingface.co/TheBloke/CodeLlama-13B-Instruct-GGUF
 
 #### 5. Run mica
-Copy the model file in the mica folder and run mica.py:
+Copy the model file in the mica folder and run mica.py, for instance using codellama:
 ```
-python mica.py llama
+python mica.py codellama
 ```
